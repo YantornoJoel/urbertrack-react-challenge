@@ -71,7 +71,6 @@ export const ImagenDetail: React.FC = () => {
                   </Typography>
                 </Grid>
                 <Grid item xs={6} textAlign="end" sx={{ marginTop: "10px" }}>
-                  {/* <Button variant="outlined" href={detailImage.download_url}>Descargar</Button> */}
                   <Link href={detailImage.download_url} target="_blank">
                     <IconButton color="primary" size="large">
                       <DownloadIcon />
