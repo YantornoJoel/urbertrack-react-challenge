@@ -1,0 +1,53 @@
+.btn {
+    border: 2px solid lightblue;
+    border-radius: 5px;
+    font-size: 20px;
+    width: 180px;
+    height: 40px;
+    color: lightblue;
+    margin-top: 10px;
+    background-color: #161f27;
+    line-height: 1.5;
+    transition: background-color 0.8s ease;
+}
+
+.btn:hover {
+    background-color: lightblue;
+    color: #161f27;
+    cursor: pointer;
+}
+
+.item-nav-link {
+    text-decoration: none;
+    color: #161f27;
+}
+
+.item-nav:hover {
+    background-color: #1976d2;
+}
+
+.navdrawer-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.navdrawer-username {
+    margin-top: 20px;
+}
+
+.imgdetail {
+    margin-top: 100px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh
+}
