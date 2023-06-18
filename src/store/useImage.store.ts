@@ -41,6 +41,7 @@ export const useImageStore = create<ImageStoreState>()(
             const image: Image = await getImageDetail(id);
             set({ detailImage: image, loading: false });
           } catch (error) {
+            set({ loading: true });
             throw new Error(String(error));
           }
         },

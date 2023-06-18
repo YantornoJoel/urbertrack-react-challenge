@@ -63,11 +63,11 @@ export const ImagenDetail: React.FC = () => {
               />
               <Grid container spacing={3} justifyContent="space-between">
                 <Grid item xs={6} alignItems="flex-start">
-                  <Typography variant="h6" color="text.secondary">
+                  <Typography variant="h6" color="text.black">
                     {detailImage.author}
                   </Typography>
-                  <Typography variant="h6" color="text.secondary">
-                    {detailImage.height} &nbsp; {detailImage.width}
+                  <Typography variant="h6" color="text.black">
+                    Alto: {detailImage.height} &nbsp; Largo: {detailImage.width}
                   </Typography>
                 </Grid>
                 <Grid item xs={6} textAlign="end" sx={{ marginTop: "10px" }}>

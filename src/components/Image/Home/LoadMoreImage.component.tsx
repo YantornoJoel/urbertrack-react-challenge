@@ -1,6 +1,7 @@
 import { Grid, IconButton } from "@mui/material";
 import RefreshIcon from "@mui/icons-material/Cached";
 import RestoreIcon from "@mui/icons-material/Restore";
+import { INITIAL_IMAGES } from "@/constants";
 
 type Props = {
   value: 11 | number;
@@ -12,7 +13,7 @@ export const LoadMoreImage: React.FC<Props> = ({ value, handleClick }) => {
     <Grid item xs={12}>
       <Grid container justifyContent="flex-end">
         <IconButton color="primary" onClick={handleClick} size="large">
-          {value === 11 ? (
+          {value === INITIAL_IMAGES ? (
             <RefreshIcon fontSize="large" />
           ) : (
             <RestoreIcon fontSize="large" />

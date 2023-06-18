@@ -39,7 +39,7 @@ export const ListImages: React.FC<Props> = ({ images }) => {
                       alt={img.author}
                       width={isMobile ? 350 : 320}
                       height={200}
-                      style={{ marginBottom: "10px", objectFit: "cover" }}
+                      style={{ marginBottom: "10px", objectFit: "contain", marginTop: '10px' }}
                     />
                   </Link>
                 </div>

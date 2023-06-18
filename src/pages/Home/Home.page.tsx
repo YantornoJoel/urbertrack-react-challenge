@@ -13,7 +13,7 @@ export const Home: React.FC = () => {
   const getImages = useImageStore((state) => state.getImages);
 
   const handleLoadMore = () => {
-    value === 11 ? setValue(LOAD_MORE_IMAGES) : setValue(INITIAL_IMAGES);
+    value === INITIAL_IMAGES ? setValue(LOAD_MORE_IMAGES) : setValue(INITIAL_IMAGES);
   };
 
   useEffect(() => {
