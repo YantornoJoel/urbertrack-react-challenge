@@ -20,6 +20,7 @@ export const AddFavoriteImage: React.FC<Props> = ({ image }) => {
     <Avatar
       onClick={() => addFavorite(image.id)}
       style={{
+        zIndex: 1,
         position: "absolute",
         top: "2px",
         right: "2px",

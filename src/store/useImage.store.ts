@@ -22,19 +22,22 @@ export const useImageStore = create<ImageStoreState>()(
         detailImage: INITIAL_STATE,
         favoriteImages: [],
         loading: true,
-        
+
         getImages: async (value: number) => {
           set({ loading: true });
           try {
             const images: Image[] = await getImages();
             set({ images: images.slice(0, value), loading: false });
           } catch (error) {
+            set({ loading: true });
             throw new Error(String(error));
           }
         },
+
         cleanImages: () => {
           set({ images: [] });
         },
+
         getImageDetail: async (id) => {
           set({ loading: true });
           try {
@@ -45,9 +48,11 @@ export const useImageStore = create<ImageStoreState>()(
             throw new Error(String(error));
           }
         },
+
         cleanImageDetail: () => {
           set({ detailImage: INITIAL_STATE });
         },
+
         addFavoriteImage: async (id: string) => {
           try {
             const images: Image[] = await getFavoritesImages(id);
@@ -58,6 +63,7 @@ export const useImageStore = create<ImageStoreState>()(
             throw new Error(String(error));
           }
         },
+
         cleanFavoriteImages: () => {
           set({ favoriteImages: [] });
         },

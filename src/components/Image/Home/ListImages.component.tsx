@@ -1,7 +1,11 @@
 import { Link } from "react-router-dom";
-import { Grid, Card, CardContent, Typography, Box, useTheme, useMediaQuery } from "@mui/material";
+import { Grid, Card, CardContent, Typography, Box } from "@mui/material";
 
-import { AddFavoriteImage, SkeletonImage } from "@/components";
+import {
+  AddFavoriteImage,
+  SkeletonImage,
+  ProgressiveImage,
+} from "@/components";
 import { Image } from "@/models";
 import { useImageStore } from "@/store";
 
@@ -17,10 +21,6 @@ export const ListImages: React.FC<Props> = ({ images }) => {
     getImageDetail(id);
   };
 
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
-
-
   return (
     <Grid container spacing={3} justifyContent="center" marginTop={1}>
       {images.map((img) => (
@@ -32,14 +32,14 @@ export const ListImages: React.FC<Props> = ({ images }) => {
               <Card>
                 <div style={{ position: "relative" }}>
                   <AddFavoriteImage image={img} />
-                  <Link to={`/img/${img.id}`} onClick={() => handleClick(img.id)}>
-                    <img
-                      onClick={() => handleClick(img.id)}
+                  <Link
+                    to={`/img/${img.id}`}
+                    onClick={() => handleClick(img.id)}
+                  >
+                    <ProgressiveImage
                       src={img.download_url}
+                      placeholder={img.author}
                       alt={img.author}
-                      width={isMobile ? 350 : 320}
-                      height={200}
-                      style={{ marginBottom: "10px" }}
                     />
                   </Link>
                 </div>

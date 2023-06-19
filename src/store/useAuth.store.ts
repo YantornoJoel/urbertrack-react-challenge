@@ -15,13 +15,11 @@ export const useAuthStore = create<UserStoreState>()(
           const isCorrect = verifyLogin(username, password);
           if (isCorrect) {
             confetti();
-            set({ isLoggedIn: true });
-            set({ username });
+            set({ isLoggedIn: true, username });
           }
         },
         logout: () => {
-          set({ isLoggedIn: false });
-          set({ username: "" });
+          set({ isLoggedIn: false, username: "" });
         },
       }),
       {
