@@ -1,6 +1,6 @@
 import { AxiosResponse } from "axios";
 import { Image } from "@/models";
-import { axiosInstanceDetails, axiosInstanceImages } from ".";
+import { axiosInstanceDetails, axiosInstanceImages } from "@/services";
 
 /**
  * Obtiene el listado de las imágenes
