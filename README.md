@@ -8,8 +8,7 @@ Ejecute el siguiente comando:
 pnpm install
 ```
 
-## Tecnologías utilizadas
-React - TypeScript - Material-UI - Zustand
+#### React - TypeScript - Material-UI - Zustand
 
 ## Descripción
 Este proyecto es una prueba técnica implementada con React y Typescript. Utiliza Material-UI para los componentes visuales. Además se emplea Zustand como biblioteca para la gestión del estado.
